@@ -11,17 +11,17 @@
         @click="handleClick"
       >
         <ccw-brand>
-          <img logo svg-inline src="./climateclock.svg" />
+          <img logo svg-inline src="./b4-logo.png" />
           <ccw-span>#ActInTime</ccw-span>
         </ccw-brand>
         <ccw-flexwrap>
           <ccw-panel deadline>
             <ccw-div>
-              <ccw-span>DEADLINE</ccw-span>
+              <ccw-span>DeadLine</ccw-span>              
               <ccw-span>{{ carbon.labels && carbon.labels[0] }}</ccw-span>
             </ccw-div>
             <ccw-readout>
-              {{ remaining.years }}<ccw-span>YRS</ccw-span>{{ pad(remaining.days, 3) }}<ccw-span>DAYS</ccw-span
+              {{ remaining.years }}<ccw-span>ANOS</ccw-span>{{ pad(remaining.days, 3) }}<ccw-span>DIAS</ccw-span
               >{{ pad(remaining.hours, 2) }}<ccw-span>:</ccw-span>{{ pad(remaining.minutes, 2) }}<ccw-span>:</ccw-span
               >{{ pad(remaining.seconds, 2) }}
             </ccw-readout>
@@ -315,7 +315,7 @@ export default {
 
     // Items below are skin/theme-specific
     animationDuration() {
-      return { animationDuration: 0.15 * this.feedText.length + "s" }
+      return { animationDuration: 0.30 * this.feedText.length + "s" }
     },
     feedText() {
       return (this.newsfeed ? `${this.newsfeed} | ` : "") + this.feed
@@ -382,9 +382,12 @@ export default {
       this.preset = preset
     }
   },
+
+  // All the data
   created() {
     this.$http
       .get("https://api.climateclock.world/v2/widget/clock.json")
+      //.get("http://localhost:3000/cache/data-teste.json")
       .then(res => {
         let modules = res.data.data.modules
         this.carbon = modules.carbon_deadline_1
