@@ -63,10 +63,14 @@
             "carbon_deadline_1": {
                 "type": "timer",
                 "flavor": "deadline",
-                "description": "Prazo de regeneração para o limite do alerta global de 1.5ºC",
+                "description": "Time to act before we reach irreversible 1.5°C global temperature rise",
                 "update_interval_seconds": 86400,
                 "timestamp": "2029-07-22T16:00:00+00:00",
-                "labels": "Prazo de regeneração para o limite do alerta global de 1.5ºC",
+                "labels": [
+                    "Time left to limit global warming to 1.5°C",
+                    "Time left before 1.5°C global warming",
+                    "Time to Act"
+                ],
                 "lang": "en"
             },
             "data_1": {
@@ -138,7 +142,7 @@
                 "flavor": "lifeline",
                 "description": "The Climate Clock’s Loss and Damage Lifeline tracks the climate debt (in $US) that wealthy, high-emitting G7 countries owe for the devastating impacts their excessive carbon emissions have caused to others, especially those in \"developing\" countries. Paying for Loss & Damage is a key climate lifeline, a clear climate solution to help the world meet its necessary climate goals.",
                 "update_interval_seconds": 86400,
-                "initial": 23342,
+                "initial": 23.342,
                 "timestamp": "2020-01-01T00:00:00+00:00",
                 "growth": "linear",
                 "resolution": 0,
@@ -170,7 +174,7 @@
                 "flavor": "lifeline",
                 "description": "",
                 "update_interval_seconds": 86400,
-                "initial": 1582344,
+                "initial": "1582344",
                 "timestamp": "2000-01-01T00:00:00+00:00",
                 "growth": "linear",
                 "resolution": 0,
@@ -192,9 +196,7 @@
                 "growth": "linear",
                 "resolution": 1,
                 "rate": 0,
-                "labels": [
-                    "Empresas em processo de Inventário de pegada de carbono"
-                ],
+                "labels": "Empresas em processo de Inventário de pegada de carbono",
                 "lang": "en"
             },
             "newsfeed_1": {
@@ -205,44 +207,68 @@
                 "lang": "en",
                 "newsfeed": [
                     {
-                        "headline_original": "B4 Convida especialistas do mercado para validação de selo de sustentabilidade",
+                        "headline_original": "Germany heading for record employment in renewables industry",
                         "date": "2024-01-25T14:48:23+00:00",
-                        "headline": "B4 Convida especialistas do mercado para validação de selo de sustentabilidade",
+                        "headline": "Germany heading for record employment in renewables industry",
                         "summary": "",
                         "source": "Euractiv",
-                        "link": "https://b4.capital/b4-convida-especialistas/"
+                        "link": "https://www.euractiv.com/section/energy-environment/news/germany-heading-for-record-employment-in-renewables-industry/ "
                     },
                     {
-                        "headline_original": "Desvendando a B4: Uma Bolsa de Ação Climática Rumo a Um Futuro Sustentável",
+                        "headline_original": "US directs $254 million to cut emissions from heavy industry",
                         "date": "2024-01-25T14:48:23+00:00",
-                        "headline": "Desvendando a B4: Uma Bolsa de Ação Climática Rumo a Um Futuro Sustentável",
+                        "headline": "US directs $254 mln to cut emissions from heavy industry",
                         "summary": "",
                         "source": "Reuters",
-                        "link": "https://b4.capital/desvendando-a-b4/"
+                        "link": "https://www.reuters.com/sustainability/sustainable-finance-reporting/us-directs-254-million-cut-emissions-heavy-industry-2024-01-25/ "
                     },
                     {
-                        "headline_original": "Como funciona as Listagens de Crédito de Carbono na B4",
+                        "headline_original": "Amazon Indigenous leaders promote reforestation for degraded forest lands",
                         "date": "2024-01-24T14:48:23+00:00",
-                        "headline": "Como funciona as Listagens de Crédito de Carbono na B4",
+                        "headline": "Amazon Indigenous leaders promote reforestation for degraded forest lands",
                         "summary": "",
                         "source": "Reuters",
                         "link": "https://www.reuters.com/business/environment/amazon-indigenous-leaders-promote-reforestation-degraded-forest-lands-2024-01-24/ "
                     },
                     {
-                        "headline_original": "Manifesto Autoral - Odair Rodrigues, Fundador da B4",
+                        "headline_original": "Brazil to share intel, technology with Amazon nations at Manaus police hub",
                         "date": "2024-01-23T14:48:23+00:00",
-                        "headline": "Manifesto Autoral - Odair Rodrigues, Fundador da B4",
+                        "headline": "Brazil to share intel & tech with Amazon nations at Manaus police hub",
                         "summary": "",
                         "source": "Reuters",
                         "link": "https://www.reuters.com/world/americas/brazil-share-intel-technology-with-amazon-nations-manaus-police-hub-2024-01-22/ "
                     },
                     {
-                        "headline_original": "5 ações que promovem a redução de emissões de carbono",
+                        "headline_original": "Wind, solar energy output hit record high in Italy in 2023",
                         "date": "2024-01-23T14:48:23+00:00",
-                        "headline": "5 ações que promovem a redução de emissões de carbono",
+                        "headline": "Wind & solar energy output hit record high in Italy in 2023",
                         "summary": "",
                         "source": "Reuters",
                         "link": "https://www.reuters.com/business/energy/wind-solar-energy-production-hit-record-high-italy-2023-2024-01-22/ "
+                    },
+                    {
+                        "headline_original": "Plastic bag bans have already prevented billions of bags from being used, report finds",
+                        "date": "2024-01-23T14:48:23+00:00",
+                        "headline": "Plastic bag bans have already prevented billions of bags from being used",
+                        "summary": "",
+                        "source": "Grist",
+                        "link": "https://grist.org/solutions/plastic-bag-bans-have-already-prevented-billions-of-bags-from-being-used-report-finds/ "
+                    },
+                    {
+                        "headline_original": "EU fossil fuel use for energy to drop 80% under 2040 climate goal- document",
+                        "date": "2024-01-23T14:48:23+00:00",
+                        "headline": "EU fossil fuel use for energy to drop 80% under 2040 climate goal",
+                        "summary": "",
+                        "source": "Reuters",
+                        "link": "https://www.reuters.com/business/energy/eu-fossil-fuel-use-energy-drop-80-under-2040-climate-goal-document-2024-01-23/ "
+                    },
+                    {
+                        "headline_original": "FEMA expands disaster aid for extreme weather events, citing climate change",
+                        "date": "2024-01-22T14:48:23+00:00",
+                        "headline": "FEMA to expand disaster aid for extreme weather events",
+                        "summary": "",
+                        "source": "The Hill",
+                        "link": "https://thehill.com/policy/energy-environment/4421708-fema-expands-disaster-aid-for-extreme-weather-events-citing-climate-change/ "
                     }
                 ]
             }
