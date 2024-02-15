@@ -16,14 +16,16 @@
             svg-inline
             src="https://climate-clock-data.s3.amazonaws.com/b4-logo.png"
           />
-          <ccw-span>#ActInTime</ccw-span>
         </ccw-brand>
         <ccw-flexwrap>
           <ccw-panel deadline>
-            <ccw-span>{{ carbon.labels }}</ccw-span>
+            <ccw-div>
+              <ccw-span>PRAZO DE</ccw-span>
+              <ccw-span>{{ carbon.labels }}</ccw-span>
+            </ccw-div>
             <ccw-readout>
               {{ remaining.years }}<ccw-span>ANOS</ccw-span
-              >{{ pad(remaining.days, 3) }}<ccw-span>DIAS</ccw-span
+              >{{ pad(remaining.days, 2) }}<ccw-span>DIAS</ccw-span
               >{{ pad(remaining.hours, 2) }}<ccw-span>:</ccw-span
               >{{ pad(remaining.minutes, 2) }}<ccw-span>:</ccw-span
               >{{ pad(remaining.seconds, 2) }}
@@ -31,7 +33,7 @@
           </ccw-panel>
           <ccw-panel lifeline>
             <ccw-div>
-              <ccw-span>Indicadores B4</ccw-span>
+              <ccw-span>Indicadores</ccw-span>
               <!-- <ccw-span v-if="currentModule == 0">{{ renewables.labels && renewables.labels[0] }}</ccw-span>
               <ccw-span v-else-if="currentModule == 1">{{ regen.labels && regen.labels[0] }}</ccw-span>
               <ccw-span v-else-if="currentModule == 2">{{ divestment.labels && divestment.labels[0] }}</ccw-span>
@@ -305,6 +307,7 @@ export default {
     // All clock action is invoked by changing this.now in an interval function
     now: null,
     deadline: null,
+    initial_time: null,
 
     // The computed feed
     feed: "",
@@ -361,7 +364,8 @@ export default {
   computed: {
     remaining() {
       if (!this.deadline) return {};
-      return this.deadline.diff(DateTime.fromJSDate(this.now), [
+
+      return DateTime.fromJSDate(this.now).diff(this.initial_time, [
         "years",
         "days",
         "hours",
@@ -576,6 +580,7 @@ export default {
         // this.divestment.count_up_ms = this.divestment.count_up_duration * 1000
 
         this.deadline = DateTime.fromISO(this.carbon.timestamp);
+        this.initial_time = DateTime.fromISO(this.carbon.initial_timestamp);
 
         // this.regen = modules.regen_agriculture
 
@@ -1361,14 +1366,16 @@ ccw-flatten-footer {
             svg-inline
             src="https://climate-clock-data.s3.amazonaws.com/b4-logo.png"
           />
-          <ccw-span>#AcaoClimaticaB4</ccw-span>
         </ccw-brand>
         <ccw-flexwrap>
           <ccw-panel deadline>
-            <ccw-span>{{ carbon.labels }}</ccw-span>
+            <ccw-div>
+              <ccw-span>PRAZO DE</ccw-span>
+              <ccw-span>{{ carbon.labels }}</ccw-span>
+            </ccw-div>
             <ccw-readout>
               {{ remaining.years }}<ccw-span>ANOS</ccw-span
-              >{{ pad(remaining.days, 3) }}<ccw-span>DIAS</ccw-span
+              >{{ pad(remaining.days, 2) }}<ccw-span>DIAS</ccw-span
               >{{ pad(remaining.hours, 2) }}<ccw-span>:</ccw-span
               >{{ pad(remaining.minutes, 2) }}<ccw-span>:</ccw-span
               >{{ pad(remaining.seconds, 2) }}
@@ -1376,7 +1383,7 @@ ccw-flatten-footer {
           </ccw-panel>
           <ccw-panel lifeline>
             <ccw-div>
-              <ccw-span>Indicadores B4</ccw-span>
+              <ccw-span>Indicadores</ccw-span>
               <!-- <ccw-span v-if="currentModule == 0">{{ renewables.labels && renewables.labels[0] }}</ccw-span>
               <ccw-span v-else-if="currentModule == 1">{{ regen.labels && regen.labels[0] }}</ccw-span>
               <ccw-span v-else-if="currentModule == 2">{{ divestment.labels && divestment.labels[0] }}</ccw-span>
@@ -1664,6 +1671,7 @@ export default {
     // All clock action is invoked by changing this.now in an interval function
     now: null,
     deadline: null,
+    initial_time: null,
 
     // The computed feed
     feed: "",
@@ -1720,7 +1728,8 @@ export default {
   computed: {
     remaining() {
       if (!this.deadline) return {};
-      return this.deadline.diff(DateTime.fromJSDate(this.now), [
+
+      return DateTime.fromJSDate(this.now).diff(this.initial_time, [
         "years",
         "days",
         "hours",
@@ -1932,6 +1941,7 @@ export default {
         // this.divestment.count_up_ms = this.divestment.count_up_duration * 1000
 
         this.deadline = DateTime.fromISO(this.carbon.timestamp);
+        this.initial_time = DateTime.fromISO(this.carbon.initial_timestamp);
 
         // this.regen = modules.regen_agriculture
 

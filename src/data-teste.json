@@ -63,10 +63,11 @@
             "carbon_deadline_1": {
                 "type": "timer",
                 "flavor": "deadline",
-                "description": "Prazo de regeneração para o limite do alerta global de 1.5ºC",
+                "description": "regeneração para o limite do alerta global de 1.5ºC",
                 "update_interval_seconds": 86400,
                 "timestamp": "2029-07-22T16:00:00+00:00",
-                "labels": "Prazo de regeneração para o limite do alerta global de 1.5ºC",
+                "initial_timestamp": "2024-01-01T00:00:00+00:00",
+                "labels": "regeneração para o limite do alerta global de 1.5ºC",
                 "lang": "en"
             },
             "data_1": {
@@ -80,7 +81,7 @@
                 "resolution": 0,
                 "rate": 0,
                 "labels": [
-                    "Empresas que aplicaram para listagem"
+                    "EMPRESAS QUE APLICARAM PARA LISTAGEM NA B4"
                 ],
                 "unit_labels": "empresas/unidades",
                 "lang": "en"
@@ -90,13 +91,13 @@
                 "flavor": "lifeline",
                 "description": "Global cropland under regenerative agriculture",
                 "update_interval_seconds": 86400,
-                "initial": 83,
+                "initial": 73,
                 "timestamp": "2021-10-01T00:00:00+00:00",
                 "growth": "linear",
                 "resolution": 0,
                 "rate": 0,
                 "labels": [
-                    "Empresas em processo de listagem"
+                    "EMPRESAS QUE ESTÃO EM PROCESSO DE LISTAGEM NA B4"
                 ],
                 "unit_labels": "empresas/unidades",
                 "lang": "en"
@@ -112,7 +113,7 @@
                 "resolution": 0,
                 "rate": 0,
                 "labels": [
-                    "Empresas aprovadas na análise de listagem"
+                    "EMPRESAS APROVADAS NA ANÁLISE DE LISTAGEM NA B4"
                 ],
                 "unit_labels": "empresas/unidades",
                 "lang": "en"
@@ -128,7 +129,7 @@
                 "resolution": 0,
                 "rate": 0,
                 "labels": [
-                    "Empresas para listar"
+                    "EMPRESAS PRONTAS PARA LISTAGEM NA B4 "
                 ],
                 "unit_labels": "empresas/unidades",
                 "lang": "en"
@@ -138,15 +139,15 @@
                 "flavor": "lifeline",
                 "description": "The Climate Clock’s Loss and Damage Lifeline tracks the climate debt (in $US) that wealthy, high-emitting G7 countries owe for the devastating impacts their excessive carbon emissions have caused to others, especially those in \"developing\" countries. Paying for Loss & Damage is a key climate lifeline, a clear climate solution to help the world meet its necessary climate goals.",
                 "update_interval_seconds": 86400,
-                "initial": 23342,
+                "initial": 1800,
                 "timestamp": "2020-01-01T00:00:00+00:00",
                 "growth": "linear",
                 "resolution": 0,
                 "rate": 0,
                 "labels": [
-                    "Dados brutos registrados"
+                    "EMPRESAS EM PROCESSO DE INVENTÁRIO DE PEGADA DE CO2 "
                 ],
-                "unit_labels": "dados únicos",
+                "unit_labels": "EMPRESAS CADASTRADAS",
                 "lang": "en"
             },
             "data_6": {
@@ -154,15 +155,15 @@
                 "flavor": "lifeline",
                 "description": "Percentage of Women in Parliaments Globally",
                 "update_interval_seconds": 86400,
-                "initial": 342,
+                "initial": 2070,
                 "timestamp": "2023-02-14T00:00:00+00:00",
                 "growth": "linear",
                 "resolution": 0,
                 "rate": 0,
                 "labels": [
-                    "Usuários cadastrados na plataforma: B2B - B2C"
+                    "CAMPANHA DE IMPACTO - A ULTIMA GOTA D’ÁGUA - ACQUA.TÍS"
                 ],
-                "unit_labels": "carteiras",
+                "unit_labels": "PESSOAS DIRETAMENTE IMPACTADAS",
                 "lang": "en"
             },
             "data_7": {
@@ -177,9 +178,9 @@
                 "rate": 0,
                 "count_up_duration": 3,
                 "labels": [
-                    "Quantidade de tCO2e em análise"
+                    "QUANTIDADE DE TONELADAS DE tCO2eq EM ANÁLISE NA B4"
                 ],
-                "unit_labels": "Mi de Toneladas",
+                "unit_labels": "Mi tCO2eq",
                 "lang": "en"
             },
             "data_8": {
@@ -187,14 +188,15 @@
                 "flavor": "lifeline",
                 "description": "Percentage of youth who feel EcoAnxiety",
                 "update_interval_seconds": 86400,
-                "initial": 1800,
+                "initial": 353,
                 "timestamp": "2021-10-01T00:00:00+00:00",
                 "growth": "linear",
                 "resolution": 1,
                 "rate": 0,
                 "labels": [
-                    "Empresas em processo de Inventário de pegada de carbono"
+                    "CAMPANHA DE IMPACTO - A ULTIMA GOTA D’ÁGUA - ACQUA.TÍS"
                 ],
+                "unit_labels": "MIL LITROS DE AGUA FILTRADA",
                 "lang": "en"
             },
             "newsfeed_1": {
